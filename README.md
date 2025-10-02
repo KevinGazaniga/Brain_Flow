@@ -1,10 +1,21 @@
-# Node.js template
 
-This is a Node.js project.
+# **BrainFlow**
+<center>
+<img src="https://github.com/KevinGazaniga/Brain_Flow/blob/main/Jogo%20Cognitivo/assets/fotos/brain_flow_logo.png?raw=true" height='200'>
 
-Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
+O Projeto **BrainFlow** tem como objetivo investigar a prevenção e o monitoramento do declínio cognitivo por meio do uso de **jogos digitais** estimuladores, considerando a importância da saúde mental no desempenho do cotidiano. A pesquisa adota o método da elaboração de um protótipo de App que integra atividades voltadas à memória, atenção, **raciocínio lógico** e linguagem, sendo coligado com a coleta de informações sobre a evolução do usuário. 
 
-## Resources
+## Tecnologias Utilizadas
 
-- [CodeSandbox — Docs](https://codesandbox.io/docs/learn)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
+ - JavaScript
+ - CSS
+ - HTML
+ - Prisma
+ - Node
+ - SQlite
+
+##
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s" height='150'>
+<img src="https://hermes.dio.me/articles/cover/88153d7f-6a9c-4b57-8e92-123a69ba1beb.png" height='150'>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" height='150'>
