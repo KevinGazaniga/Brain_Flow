@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    max-width: fit-content;
+}
+.Caixa {
+    display: flex;
+    width: 1350px;
+    height: 100px;
+    margin: 10px;
+    border-color: black;
+}
+.caixa_jogos {
+    display: flex;
+    width: 1350px;
+    height: 100px;
+    margin: 10px;
+    border-color: black;
+}
+.caixa_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Caixa2 {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #2b99f3;
+    justify-content: center;
+    align-items: center;
+}
+.Caixa1 {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to bottom, #2b99f3, #0c78cf);
+    justify-content: flex-start;
+}
+.pesquisar {
+    display: flex;
+    height: 28px;
+    width: 350px;
+    border: none;
+}
+.div_pesquisa {
+    display: flex;
+    width: 400px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+.lupa {
+    width: 28px;
+    height: 28px;
+    border-radius: 20px;
+    border: none;
+    background-image: url("../fotos/lupa.svg");
+    background-color: transparent;
+    background-size: cover;
+    cursor: pointer;
+}
+.logo {
+    width: 150px;
+    height: 90px;
+}
+.titulo_e_resumo {
+    display: flex;
+    margin-top: 10px;
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+}
+.button_jogar {
+    display: flex;
+    width: 300px;
+    height: 89px;
+    justify-content: center;
+    align-items: center;
+}
+.imagem_jogo {
+    display: flex;
+    width: 100px;
+    height: auto;
+}
+.img_jg {
+    width: 80px;
+}
+.resumo {
+    font-size: 20.5px;
+    font-family: initial;
+    color: #053358;
+}
+.titulo{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #053358;
+
+}
+.Jogar {
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: #1073c4;
+    border-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.centro {
+    justify-content: center;
+    align-items: center;
+}
+.opcoes {
+    display: flex;
+    width: 300px;
+    height: 65px;
+    background-color: #0c78cf;
+    border-color: black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.img_tamanho {
+    width: 40px;
+}
+.caixa_jogos_div {
+    display: flex;
+}

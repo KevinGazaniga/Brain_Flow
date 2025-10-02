@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(to bottom, #2b99f3, #053358);
+}
+
+.a {
+    background-color: transparent;
+}
+
+.b {
+    padding: 30px 35px;
+    border-color: rgb(139, 45, 148);
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 40px;
+    color: rgb(255, 0, 255);
+    cursor: pointer
+}
+
+.c {
+    color: #C2E3FF;
+    font-family: Arial;
+    font-size: 60px;
+    cursor: pointer
+}
+
+.d {
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(222, 64, 228);
+    border-radius: 15px;
+    height: 35px;
+    width: 350px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(224, 191, 222);
+    border-color: rgb(247, 21, 255);
+    cursor: pointer
+}
+.e {
+    height: 23px;
+    background-color: rgb(224, 191, 222);
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-color: rgb(247, 21, 255);
+    color: rgb(222, 64, 228);
+    cursor: pointer
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fundo_ciano {
+    width: 400px;
+    height: 400px;
+    background-color: #C2E3FF;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 40px;
+}
+.central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jogadores {
+    width:  300px;
+    display: flex;
+    justify-content: center;
+}

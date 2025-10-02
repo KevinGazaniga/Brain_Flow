@@ -1,0 +1,39 @@
+body {
+    height: 97.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: linear-gradient(to bottom, #2b99f3, #053358);
+    background-repeat: no-repeat;
+}
+.parede {
+    width: 70px;
+    height: 90px;
+    background-color: red;
+  }
+.chão {
+    background-color: rgb(24, 14, 3);
+    border:none!important;             
+}
+.conteúdo {
+  width: 900PX;
+  height: 300PX;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.cartas {
+  width: 500PX;
+  height: 800PX;
+  display: flex;
+  background-color: #C2E3FF;
+  flex-direction: column;
+  
+}
+.carta {
+  display: flex;
+  width: auto;
+}
