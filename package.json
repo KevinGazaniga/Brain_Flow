@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "Ives van Hoorne",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.16.0",
+    "express": "^5.1.0",
+    "prisma": "^6.16.0"
+  }
+}
