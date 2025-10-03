@@ -8,11 +8,11 @@ body {
 
 .b {
     padding: 30px 35px;
-    border-color: rgb(139, 45, 148);
+    border-color: rgb(45, 115, 148);
     cursor: pointer;
     border-radius: 15px;
     font-size: 40px;
-    color: rgb(255, 0, 255);
+    color: rgb(0, 153, 255);
     cursor: pointer
 }
 
