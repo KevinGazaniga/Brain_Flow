@@ -24,8 +24,8 @@ server.post("/usuario", async (req, res) => {
 
 server.delete("/usuarios/:id", async (req, res) => {
   await db.usuario.delete({
-    where: 
-  })
-})
+    where: jj,
+  });
+});
 
 server.listen(3000, () => console.log("Ro---jjj---"));
