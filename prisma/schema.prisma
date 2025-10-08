@@ -14,7 +14,7 @@ datasource db {
 model Usuario {
   id      Int      @id @default(autoincrement())
   nome    String
-  nacionalidade String
+  senha   String
   pontuacao Pontuacao?
 }
 
