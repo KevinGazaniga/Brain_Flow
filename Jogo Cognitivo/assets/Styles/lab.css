@@ -1,106 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-image: url("../fotos/fundolab.jpg");
-    background-size: cover;
+  background: linear-gradient(to bottom, #2d99f3, #053358);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-size: cover;
+  min-height: 100vh;
 }
-.labirinto{
-    display: grid;
-    grid-template-columns: repeat(10, 50px);
-    grid-template-rows: repeat(10, 50px);
-    justify-content: center;
-}
-
+.labirinto {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  justify-content: center;
+} /*não mudei nada*/
 
 .parede {
-    background-image: url("../fotos/paredelab.jpg");
-    display: flex;
-    background-size: cover;
-    border:none!important;
-    background-repeat: no-repeat;
-}
+  background-image: url("../fotos/paredelab.jpg");
+  display: flex;
+  background-size: cover;
+  border: none !important;
+  background-repeat: no-repeat;
+} /*não mudei nada*/
 .chão {
-    background-color: rgb(24, 14, 3);
-    border:none!important;             
+  background-color: #19568a;
+  border: none !important;
+} /*não mudei nada*/
+
+.texto {
+  font-family: "Alumni Sans SC", sans-serif;
+  text-align: center;
+  font-size: 60px;
 }
 
-.texto{
-    font-family: "fantasy", "papyrus";
-    text-align: center;
-    color: antiquewhite;
-    font-size: 40px;
-
+.jogador {
+  background-image: url("../fotos/jogadorlab.png");
+  background-size: cover;
+  border: none;
 }
 
-.jogador{
-    background-image: url("../fotos/jogadorlab.png");
-    background-size: cover;
-    border: none;
+.fun_caixa {
+  width: 540px;
+  height: 540px;
+  background-color: #19568a;
+  align-content: center;
+  border-radius: 5%;
 }
 
-.fun_caixa{
-width: 540px;
-height: 540;
-background-color: rgb(65, 119, 167);
-align-content: center;
-border-radius: 5%;
-background-image: url("../fotos/fundodemadeira.jpg");
+.venceu {
+  background-image: url("../fotos/porta1.png");
+  background-size: cover;
 }
-
-
-.venceu{
-background-image: url("../fotos/porta1.png");
-background-size: cover;
-
+.fundoBotao {
+  width: 90px;
 }
 
 .exit {
-background-color: #d67047;
-border-radius: 20px;
-border-color: #d67047;
-font-size: 30px;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-cursor: pointer
+  background-color: #c2e3ff;
+  border-radius: 15px;
+  border-color: #07477b;
+  font-size: 30px;
+  font-family: "Alumni Sans SC", sans-serif;
+  cursor: pointer;
 }
-.brilhante {
-    color: rgb(184, 130, 69); /* Cor do texto */
-    text-shadow:
-        0 0 5px #d67047, /* Sombra branca interna */
-        0 0 10px rgb(0, 0, 0),
-        0 0 15px rgb(0, 0, 0), /* Sombra azul para o efeito neon */
-        0 0 20px rgb(0, 0, 0),
-        0 0 25px rgb(0, 0, 0),
-        0 0 30px rgb(0, 0, 0);
-    animation: glow 1.5s ease-in-out infinite alternate;
-    }
+.fundoTitulo {
+  color: #c2e3ff; /* Cor do texto */
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #07477b;
+}
 
+.fundoSair {
+  color: #c2e3ff; /* Cor do texto */
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #07477b;
+}
+
+/*nao esta mudando nada*/
 @keyframes glow {
-from {
-    text-shadow:
-    0 0 5px rgb(0, 0, 0),
-    0 0 10px rgb(0, 0, 0),
-    0 0 15px #d67047
-    0 0 20px #d67047
-    0 0 25px #d67047
-    0 0 30px #d67047
-}
-to {
-    text-shadow:
-    0 0 10px #d67047
-    0 0 15px #d67047
-    0 0 20px #d67047
-    0 0 25px rgb(0, 0, 0),
-    0 0 30px rgb(0, 0, 0),
-    0 0 35px rgb(0, 0, 0);
-}
+  from {
+    text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0),
+      0 0 15px #d67047 0 0 20px #d67047 0 0 25px #d67047 0 0 30px #d67047;
+  }
+  to {
+    text-shadow: 0 0 10px #d67047 0 0 15px #d67047 0 0 20px #d67047 0 0 25px
+        rgb(0, 0, 0),
+      0 0 30px rgb(0, 0, 0), 0 0 35px rgb(0, 0, 0);
+  }
 }
