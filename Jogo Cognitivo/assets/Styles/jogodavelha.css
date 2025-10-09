@@ -1,72 +1,109 @@
 body {
-    background: linear-gradient(to bottom, #2b99f3, #053358);
+  background: linear-gradient(to bottom, #2b99f3, #053358);
 }
 
-.a {
-    background-color: transparent;
+.fundoTabuleiro {
+  background-color: transparent;
 }
 
-.b {
-    padding: 30px 35px;
-    border-color: rgb(45, 115, 148);
-    cursor: pointer;
-    border-radius: 15px;
-    font-size: 40px;
-    color: rgb(0, 153, 255);
-    cursor: pointer
+.bordaTabuleiro {
+  padding: 30px 35px;
+  border-color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 15px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
-.c {
-    color: #C2E3FF;
-    font-family: Arial;
-    font-size: 60px;
-    cursor: pointer
+.tituloMaior {
+  color: #c2e3ff;
+  font-family: Arial;
+  font-size: 60px;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-.d {
-    display: flex;
-    font-size: 20px;
-    cursor: pointer;
-    color: rgb(222, 64, 228);
-    border-radius: 15px;
-    height: 35px;
-    width: 350px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(224, 191, 222);
-    border-color: rgb(247, 21, 255);
-    cursor: pointer
+.limparSair {
+  display: flex;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(51, 157, 199);
+  border-radius: 15px;
+  height: 35px;
+  width: 350px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(28, 38, 180);
+  cursor: pointer;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
-.e {
-    height: 23px;
-    background-color: rgb(224, 191, 222);
-    border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-color: rgb(247, 21, 255);
-    color: rgb(222, 64, 228);
-    cursor: pointer
+.jogadorA {
+  height: 23px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-color: rgb(2, 2, 2);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 .buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .fundo_ciano {
-    width: 400px;
-    height: 400px;
-    background-color: #C2E3FF;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border-radius: 40px;
+  width: 400px;
+  height: 400px;
+  background-color: #c2e3ff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 40px;
 }
 .central {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .jogadores {
-    width:  300px;
-    display: flex;
-    justify-content: center;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.quadradinhoTabuleiro {
+  background-color: #0380e5;
+}
+
+.confirmarBotão {
+  color: #4ba2e9;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+.button {
+  width: 89px;
+  height: 32px;
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.button p {
+  color: rgb(51, 157, 199);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  text-decoration: none;
 }
