@@ -13,7 +13,7 @@ O Projeto **BrainFlow** tem como objetivo investigar a prevenção e o monitoram
 - Prisma
 - Node
 - SQlite
-- Figma
+- [Figma](https://www.figma.com/design/4u6lu1H1Du1DAAgjWiFYEh/Untitled?node-id=0-1&t=gZfXSywlL2aDAGJc-1)
 
 ##
 
