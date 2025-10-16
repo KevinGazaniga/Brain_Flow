@@ -20,5 +20,4 @@ O Projeto **BrainFlow** tem como objetivo investigar a prevenção e o monitoram
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHnJDLOcdm_0b6N6kNj-1OvO9KhKYgqIy0w&s" height='150'>
 <img src="https://hermes.dio.me/articles/cover/88153d7f-6a9c-4b57-8e92-123a69ba1beb.png" height='150'>
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s" height='150'>
-<img src="https://s3-alpha.figma.com/hub/file/2811018019/cae7d25d-8aff-4c49-8189-fad585dfb7cb-cover.png" height='150'>
 <img src="figma_logo.svg" height='150'>
