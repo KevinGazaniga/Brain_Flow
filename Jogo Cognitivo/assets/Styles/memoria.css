@@ -1,39 +1,74 @@
 body {
-    height: 97.9vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background: linear-gradient(to bottom, #2b99f3, #053358);
-    background-repeat: no-repeat;
+  height: 97.9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background: linear-gradient(to bottom, #2b99f3, #053358);
+  background-repeat: no-repeat;
 }
+.texto {
+  font-family: "Alumni Sans SC", sans-serif;
+  text-align: center;
+  font-size: 60px;
+}
+.fundoTitulo {
+  color: #c2e3ff;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #07477b;
+}
+
 .parede {
-    width: 70px;
-    height: 90px;
-    background-color: red;
-  }
+  width: 70px;
+  height: 90px;
+  background-color: #0b5c9e;
+}
 .chão {
-    background-color: rgb(24, 14, 3);
-    border:none!important;             
+  background-color: rgb(24, 14, 3);
+  border: none !important;
 }
 .conteúdo {
-  width: 900PX;
-  height: 300PX;
+  width: 900px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-}
-.cartas {
-  width: 500PX;
-  height: 800PX;
-  display: flex;
-  background-color: #C2E3FF;
-  flex-direction: column;
-  
+  gap: 20px;
 }
 .carta {
+  width: 427px;
+  height: 833px;
   display: flex;
-  width: auto;
+  background-color: #c2e3ff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 20px 35px;
+  border-radius: 30px;
+}
+
+.carta input {
+  width: 103px;
+  height: 132px;
+  border-radius: 19px;
+}
+
+.limparSair {
+  display: flex;
+  font-size: 20px;
+  color: rgb(51, 157, 199);
+  border-radius: 15px;
+  height: 35px;
+  width: 150px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+.fundo_limparsair {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
 }
