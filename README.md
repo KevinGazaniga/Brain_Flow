@@ -1,18 +1,18 @@
-
 # **BrainFlow**
+
 <center>
 <img src="https://github.com/KevinGazaniga/Brain_Flow/blob/main/Jogo%20Cognitivo/assets/fotos/brain_flow_logo.png?raw=true" height='200'>
 
-O Projeto **BrainFlow** tem como objetivo investigar a prevenção e o monitoramento do declínio cognitivo por meio do uso de **jogos digitais** estimuladores, considerando a importância da saúde mental no desempenho do cotidiano. A pesquisa adota o método da elaboração de um protótipo de App que integra atividades voltadas à memória, atenção, **raciocínio lógico** e linguagem, sendo coligado com a coleta de informações sobre a evolução do usuário. 
+O Projeto **BrainFlow** tem como objetivo investigar a prevenção e o monitoramento do declínio cognitivo por meio do uso de **jogos digitais** estimuladores, considerando a importância da saúde mental no desempenho do cotidiano. A pesquisa adota o método da elaboração de um protótipo de App que integra atividades voltadas à memória, atenção, **raciocínio lógico** e linguagem, sendo coligado com a coleta de informações sobre a evolução do usuário
 
 ## Tecnologias Utilizadas
 
- - JavaScript
- - CSS
- - HTML
- - Prisma
- - Node
- - SQlite
+- JavaScript
+- CSS
+- HTML
+- Prisma
+- Node
+- SQlite
 
 ##
 
