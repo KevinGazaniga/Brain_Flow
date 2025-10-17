@@ -1,13 +1,13 @@
 const { Router } = require("express");
 const jwt = require("jsonwebtoken");
-const { db } = require("../db");
+const { db } = require("../dbs");
 const rotaLogin = Router();
 
 rotaLogin.post("/login", async (req, res) => {
   const { nome, senha } = req.body;
 
-  const usuario = db.usuario.findUnique({
-    where: {},
+  const usuario = db.usuario.findFirst({
+    where: { nome },
   });
 
   if (senha !== usuario.senha) {
