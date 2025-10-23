@@ -4,29 +4,39 @@ let carta_anterior = null
 let cartas_certas = 0
 addEventListener("DOMContentLoaded", () => {
   const tabuleiro = document.querySelector("#cartas");
-  const mapa = [  0, 0, 0, 0, 
-                  0, 0, 0, 0, 
-                  0, 0, 0, 0  ];
-
+  const mapa = [   0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0 ,0    ];
    const imagens = [
     "",
     `<img src="./fotos/arvore.svg">`,
     `<img src="./fotos/aviao.svg">`,
-    `<img src="./fotos/bicicleta.svg">`,
-    `<img src="./fotos/cafe.svg">`,
+    `<img src="./fotos/bicicleta.svg">`, 
+    `<img src="./fotos/cafe.svg">`, 
     `<img src="./fotos/carro.svg">`,
-    `<img src="./fotos/estrela.svg">`,
-    `<img src="./fotos/fantasma.svg">`
+    `<img src="./fotos/estrela.svg">`, 
+    `<img src="./fotos/fantasma.svg">`, 
+    `<img src="./fotos/hipopotamo.svg">`,
+    `<img src="./fotos/lua.svg">`,
+    `<img src="./fotos/pata.svg">`,
+    `<img src="./fotos/peixe.svg">`,
+    `<img src="./fotos/presente.svg">`,
+    `<img src="./fotos/sapo.svg">`,
+    `<img src="./fotos/sol.svg">`,
+    `<img src="./fotos/cerebro.svg">`,
+    `<img src="./fotos/telefone.svg">`
    ]
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 30; i++) {
 
     tabuleiro.innerHTML += `<div id="${i}" type="button" class="virada ${
       mapa[i] == 0 ? "carta_img no-select" : "carta_img no-select"
     }">`;
   }
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 30; i++) {
     const valor = atribuir_imagem()
     console.log("Atribuindo o valor: ", valor)
     const carta = document.getElementById(i)
@@ -44,10 +54,10 @@ addEventListener("DOMContentLoaded", () => {
         if (carta.innerHTML == carta_anterior.innerHTML) {
           cartas_certas = cartas_certas+2
           console.log(cartas_certas)
-          if (cartas_certas == 12) {
-            alert("Parabéns, modo fácil concluido. Quando estiver pronto(a) clique em 'Próximo' para a próxima dificuldade")
+          if (cartas_certas == 30) {
             window.location.href = "file:///C:/Users/4541967714/Documents/teste/memoria.html"
-          }
+            alert("Parabéns, modo fácil concluido. Quando estiver pronto(a) clique em 'Próximo' para a próxima dificuldade")
+        }
           
         }else {
           carta.classList.toggle("virada")
@@ -68,13 +78,15 @@ console.log("resultado:")
 console.log({ numeros })
 });
 
-const numeros = [  0, 0, 0, 0, 
-                  0, 0, 0, 0, 
-                  0, 0, 0, 0  ]
+const numeros = [   0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0 ,0    ]
 
 function atribuir_imagem() {
     const min = 1;
-    const max = 6;
+    const max = 15;
     const numeroInteiroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
     console.log("numero gerado:", numeroInteiroAleatorio)
 
@@ -91,5 +103,3 @@ function atribuir_imagem() {
     
     
 }
-
-

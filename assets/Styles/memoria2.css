@@ -34,6 +34,7 @@ div.virada {
   flex-direction: row;
   flex-wrap: wrap;
   border-radius: 18px;
+  background-size: contain;
 }
 .chão {
   background-color: rgb(24, 14, 3);
@@ -49,7 +50,7 @@ div.virada {
   gap: 20px;
 }
 .carta {
-  width: 427px;
+  width: 520px;
   height: 833px;
   display: flex;
   background-color: #c2e3ff;
@@ -61,8 +62,8 @@ div.virada {
 }
 
 .carta input {
-  width: 103px;
-  height: 132px;
+  width: 52px;
+  height: 53px;
   border-radius: 19px;
 }
 
@@ -88,14 +89,9 @@ div.virada {
 .carta_img:not(.virada) {
   background-color: #F9FFD9 !important;
 }
-
 .no-select {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-}
-
-.carta_img svg{
-  fill: #053358;
 }
