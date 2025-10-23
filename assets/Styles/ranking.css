@@ -1,0 +1,23 @@
+.letra {
+    font-family: 'Alumni Sans'; 
+ }
+ .sombra {
+  box-shadow: 5px 5px 10px grey;
+}
+.largura {
+    height: 100px;
+}
+.bordaredonda{
+    border-radius: 20px;
+}
+.pesquisar { 
+    display: flex;
+    width: 200px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho {
+    background: linear-gradient(to bottom, #2b99f3, #053358);
+   }
