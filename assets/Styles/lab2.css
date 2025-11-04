@@ -17,7 +17,7 @@
   }
   .labirinto {
     display: grid;
-    grid-template-columns: repeat(15, 30px);
+    grid-template-columns: repeat(30, 30px);
     grid-template-rows: repeat(14, 30px);
     justify-content: center;
     border-radius: 10px;
@@ -73,6 +73,7 @@
     font-family: "Alumni Sans SC", sans-serif;
     cursor: pointer;
   }
+  
   .fundoTitulo {
     color: #c2e3ff; /* Cor do texto */
     -webkit-text-stroke-width: 0.5px;
