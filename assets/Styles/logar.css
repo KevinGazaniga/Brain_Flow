@@ -1,94 +1,106 @@
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-image: url("../fotos/fundo_site_brain.PNG"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 1);
-    margin: 0px;
-    background: linear-gradient(to bottom, #2b99f3, #053358);
-    box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 1);
+  margin: 0px;
+  background: linear-gradient(to bottom, #2b99f3, #053358);
+  box-sizing: border-box;
+}
+
+.login-container {
+  position: relative;
+  background: #022746;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  width: 320px;
+  text-align: center;
+  z-index: 1;
 }
 
 .caixa_texto {
-    width: 1100px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    border-color: aliceblue;
-    border-color: rgba(0, 0, 0, 0.671);
-    font-size: 25px;
-    font-family: "Sansita", sans-serif;
-    color: rgba(0, 0, 0, 0.603);
-    cursor: pointer
+  width: 440px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  border-radius: 50px;
+  border-color: aliceblue;
+  border-color: rgba(0, 0, 0, 0.671);
+  font-size: 25px;
+  font-family: "Alumni Sans";
+  color: rgba(0, 0, 0, 0.603);
+  cursor: pointer;
 }
 
 .centro {
-    width: 1300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  width: 570px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .entrada {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 20px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
 .cadastrar {
-    color: (rgb0, 204, 255);
-    background-color: rgb(0, 0, 0);
-    border: none;
-    width: 800px;
-    height: 30px;
-    background-color: transparent;
-    font-family: "Sansita", sans-serif;
-    font-size: 30px;
-    color: white;
-    cursor: pointer
-
+  color: (rgb0, 204, 255);
+  background-color: rgb(0, 0, 0);
+  border: none;
+  width: 800px;
+  height: 30px;
+  background-color: transparent;
+  font-family: "Alumni Sans";
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 .titulo {
-    font-family: "Sansita", sans-serif;
-    font-size: 115px;
-    color: white;
+  font-family: "Alumni Sans";
+  font-size: 80px;
+  color: white;
 }
+
 .entrar {
-    width: 300px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border-color: aliceblue;
-    background-color: #053358;
-    font-family: "Sansita", sans-serif;
-    color: white;
-    font-size: 30px;
-    border: none;
-    cursor: pointer
+  width: 300px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border-color: aliceblue;
+  background-color: #0e4775;
+  font-family: "Alumni Sans";
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
 }
+
 .espaço {
-    width: 300px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
+
 .botoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
 }
