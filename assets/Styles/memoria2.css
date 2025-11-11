@@ -49,7 +49,7 @@ div.virada {
   gap: 20px;
 }
 .carta {
-  width: 427px;
+  width: 520px;
   height: 833px;
   display: flex;
   background-color: #c2e3ff;
@@ -86,16 +86,16 @@ div.virada {
   gap: 25px;
 }
 .carta_img:not(.virada) {
-  background-color: #F9FFD9 !important;
+  background-color: #f9ffd9 !important;
 }
 
 .no-select {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-.carta_img svg{
+.carta_img svg {
   fill: #053358;
 }
