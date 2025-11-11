@@ -83,7 +83,7 @@ div.virada {
 .fundo_limparsair {
   display: flex;
   flex-direction: row;
-  width: 300px;
+  width: 48px;
   justify-content: center;
 }
 .carta_img:not(.virada) {

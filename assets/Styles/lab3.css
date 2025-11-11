@@ -1,108 +1,107 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Georgia, Times, "Times New Roman", serif;
-  }
-  
-  body {
-    background: linear-gradient(to bottom, #2d99f3, #053358);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-size: cover;
-    min-height: 100vh;
-    justify-content: center;
-  }
-  .labirinto {
-    display: grid;
-    grid-template-columns: repeat(45, 20px);
-    grid-template-rows: repeat(25, 20px);
-    justify-content: center;
-    border-radius: 10px;
-    overflow: hidden;
-  } /*não mudei nada*/
-  
-  .parede {
-    background-color: #19568a;
-    display: flex;
-    background-size: cover;
-    border: none !important;
-    background-repeat: no-repeat;
-  } /*não mudei nada*/
-  .chão {
-    background-color: #C2E3FF;
-    border: none !important;
-  } /*não mudei nada*/
-  
-  .texto {
-    font-family: "Alumni Sans SC", sans-serif;
-    text-align: center;
-    font-size: 60px;
-  }
-  
-  .jogador {
-    background-image: url("fotos/jogadorlab.png");
-    background-size: cover;
-    border: none;
-  }
-  
-  .fun_caixa {
-    width: fit-content; height: fit-content;
-    padding: 15px;
-    background-color: #19568a;
-    align-content: center;
-    border-radius: 5%;
-  }
-  
-  .venceu {
-    background-image: url("fotos/pergaminho.svg");
-    background-size: cover;
-  }
-  .fundoBotao {
-    width: 90px;
-  }
-  
-  .exit {
-    width: 113px;
-    background-color: #c2e3ff;
-    border-radius: 15px;
-    border-color: #07477b;
-    font-size: 30px;
-    font-family: "Alumni Sans SC", sans-serif;
-    cursor: pointer;
-  }
-  
-  .fundoTitulo {
-    color: #c2e3ff; /* Cor do texto */
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: #07477b;
-  }
-  
-  .fundoSair {
-    color: #c2e3ff; /* Cor do texto */
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: #07477b;
-  }
-  
-  .exit_proximo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-  }
-  
-  .bordas_arredondadas {
-      border-top-left-radius: 10px;
-  }
-  .bordas_arredondadas2 {
-      border-top-right-radius: 10px;
-  }
-  .bordas_arredondadas3 {
-      border-bottom-left-radius: 10px;
-  }
-  .bordas_arredondadas4 {
-      border-bottom-right-radius: 10px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #2d99f3, #053358);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  min-height: 100vh;
+  justify-content: center;
+  gap: 30px;
+}
+.labirinto {
+  display: grid;
+  grid-template-columns: repeat(45, 30px);
+  grid-template-rows: repeat(25, 30px);
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+} /*não mudei nada*/
+
+.parede {
+  background-color: #19568a;
+  display: flex;
+  background-size: cover;
+  border: none !important;
+  background-repeat: no-repeat;
+} /*não mudei nada*/
+.chão {
+  background-color: #C2E3FF;
+  border: none !important;
+} /*não mudei nada*/
+
+.texto {
+  font-family: "Alumni Sans SC", sans-serif;
+  text-align: center;
+  font-size: 125px;
+  color: aliceblue;
+}
+
+.jogador {
+  background-image: url("../fotos/jogadorlab.png");
+  background-size: cover;
+  border: none;
+}
+
+.fun_caixa {
+  width: fit-content; height: fit-content;
+  padding: 15px;
+  background-color: #19568a;
+  align-content: center;
+  border-radius: 5%;
+}
+
+.venceu {
+  background-image: url("../fotos/pergaminho.svg");
+  background-size: cover;
+}
+.fundoBotao {
+  width: 100vw;
+}
+.exit {
+  width: 113px;
+  background-color: #c2e3ff;
+  border-radius: 15px;
+  border-color: black;
+  font-size: 25px;
+  font-family: "Alumni Sans SC", sans-serif;
+  cursor: pointer;
+}
+.fundoTitulo {
+  color: #0B5C9E; /* Cor do texto */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #07477b;
+}
+
+.fundoSair {
+  color: #C2E3FF; /* Cor do texto */
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #0B5C9E;
+}
+
+.exit_proximo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}
+
+.bordas_arredondadas {
+    border-top-left-radius: 10px;
+}
+.bordas_arredondadas2 {
+    border-top-right-radius: 10px;
+}
+.bordas_arredondadas3 {
+    border-bottom-left-radius: 10px;
+}
+.bordas_arredondadas4 {
+    border-bottom-right-radius: 10px;
+}
   

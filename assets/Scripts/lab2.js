@@ -39,14 +39,14 @@ function andar() {
     var prevCampo = document.querySelector(".jogador");
     if (prevCampo) {
         prevCampo.classList.remove("jogador");
+        var campo = document.getElementById(player);
+        campo.classList.add("jogador");
     }
     
-    if ( player == 239)
-    alert("Você conseguiu achar o pergaminho do raciocínio")
-    //window.location.href = '../Códigos/labírinto_fases/lab2.html';
-    var campo = document.getElementById(player);
-    campo.classList.add("jogador");
-    
+    if ( player == 239) {
+        alert("Você conseguiu achar o pergaminho do intelecto");
+        window.location.href = 'lab2.html';
+    }
 }
 
 function podeMover(proximaPosicao) {

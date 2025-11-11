@@ -10,13 +10,13 @@ addEventListener("DOMContentLoaded", () => {
 
    const imagens = [
     "",
-    `<img src="./fotos/arvore.svg">`,
-    `<img src="./fotos/aviao.svg">`,
-    `<img src="./fotos/bicicleta.svg">`,
-    `<img src="./fotos/cafe.svg">`,
-    `<img src="./fotos/carro.svg">`,
-    `<img src="./fotos/estrela.svg">`,
-    `<img src="./fotos/fantasma.svg">`
+    `<img src="../fotos/arvore.svg">`,
+    `<img src="../fotos/aviao.svg">`,
+    `<img src="../fotos/bicicleta.svg">`,
+    `<img src="../fotos/cafe.svg">`,
+    `<img src="../fotos/carro.svg">`,
+    `<img src="../fotos/estrela.svg">`,
+    `<img src="../fotos/fantasma.svg">`
    ]
 
   for (let i = 0; i < 12; i++) {
@@ -46,7 +46,7 @@ addEventListener("DOMContentLoaded", () => {
           console.log(cartas_certas)
           if (cartas_certas == 12) {
             alert("Parabéns, modo fácil concluido. Quando estiver pronto(a) clique em 'Próximo' para a próxima dificuldade")
-            window.location.href = "file:///C:/Users/4541967714/Documents/teste/memoria.html"
+            window.location.href = 'memoria.html';
           }
           
         }else {
@@ -91,5 +91,4 @@ function atribuir_imagem() {
     
     
 }
-
 

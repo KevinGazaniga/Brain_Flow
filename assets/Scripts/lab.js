@@ -31,14 +31,15 @@ function andar() {
   var prevCampo = document.querySelector(".jogador");
   if (prevCampo) {
     prevCampo.classList.remove("jogador");
+    var campo = document.getElementById(player);
+    campo.classList.add("jogador");
   }
 
-  if (player == 164) alert("Você conseguiu achar o pergaminho do raciocínio");
-  //window.location.href = '../Códigos/labírinto_fases/lab2.html';
-  var campo = document.getElementById(player);
-  campo.classList.add("jogador");
+  if (player == 164) {
+    alert("Você conseguiu achar o pergaminho do raciocínio");
+    window.location.href = 'lab.html';
+  }
 }
-
 function podeMover(proximaPosicao) {
   if (proximaPosicao < 0 || proximaPosicao > mapa.length - 1) {
     return false;

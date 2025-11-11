@@ -25,7 +25,7 @@ function verificadorJogada(id) {
                 document.getElementById(id).value = "O"
             }
             
-            if(verificarGanhador()){
+            if(verificarGanhador()){''
                 if (identificarJogador() == "X") {
                     alert("Parabéns, " + document.getElementById(10).value + " ganhou!")
                     limparTela()
@@ -98,7 +98,6 @@ function com() {
     var j2 = document.getElementById(11).value
     alert(j1 + " possui o X, " + j2 + " possui o O.")
 }
-
 
 
 

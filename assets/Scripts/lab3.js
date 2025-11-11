@@ -66,12 +66,15 @@ function andar() {
   var prevCampo = document.querySelector(".jogador");
   if (prevCampo) {
     prevCampo.classList.remove("jogador");
+    var campo = document.getElementById(player);
+    campo.classList.add("jogador");
+
   }
 
-  if (player == 562) alert("Você conseguiu achar o pergaminho do raciocínio");
-  //window.location.href = '../Códigos/labírinto_fases/lab2.html';
-  var campo = document.getElementById(player);
-  campo.classList.add("jogador");
+  if (player == 562) {
+    alert("Você conseguiu achar o pergaminho da Reflexão, com isso você conectou todas as partes do seu cortex pré-frontal");
+    window.location.href = 'lab3.html';
+  }
 }
 
 function podeMover(proximaPosicao) {
