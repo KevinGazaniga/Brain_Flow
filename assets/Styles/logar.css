@@ -3,7 +3,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url("../fotos/fundo_site_brain.PNG"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 1);
@@ -12,24 +11,36 @@ body {
   box-sizing: border-box;
 }
 
+.login-container {
+  position: relative;
+  background: #022746;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  width: 320px;
+  text-align: center;
+  z-index: 1;
+}
+
 .caixa_texto {
-  width: 1100px;
-  height: 90px;
+  width: 440px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: left;
   border-radius: 50px;
   border-color: aliceblue;
   border-color: rgba(0, 0, 0, 0.671);
   font-size: 25px;
-  font-family: "Sansita", sans-serif;
+  font-family: "Alumni Sans";
   color: rgba(0, 0, 0, 0.603);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .centro {
-  width: 1300px;
-  height: 300px;
+  width: 570px;
+  height: 570px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +53,6 @@ body {
   flex-direction: column;
   gap: 25px;
   margin-bottom: 20px;
-
 }
 
 .cadastrar {
@@ -52,18 +62,18 @@ body {
   width: 800px;
   height: 30px;
   background-color: transparent;
-  font-family: "Sansita", sans-serif;
+  font-family: "Alumni Sans";
   font-size: 30px;
   color: white;
-  cursor: pointer
-
+  cursor: pointer;
 }
 
 .titulo {
-  font-family: "Sansita", sans-serif;
-  font-size: 115px;
+  font-family: "Alumni Sans";
+  font-size: 80px;
   color: white;
 }
+
 .entrar {
   width: 300px;
   height: 60px;
@@ -71,21 +81,23 @@ body {
   align-items: center;
   border-radius: 20px;
   border-color: aliceblue;
-  background-color: #053358;
-  font-family: "Sansita", sans-serif;
+  background-color: #0e4775;
+  font-family: "Alumni Sans";
   color: white;
   font-size: 30px;
   border: none;
-  cursor: pointer
+  cursor: pointer;
 }
+
 .espaço {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 40px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
+
 .botoes {
   display: flex;
   flex-direction: column;

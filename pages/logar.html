@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/Styles/logar.css">
-    <script src="../assets/Scripts/logar.js"></script>
+    <script src="../src/controllers/logar.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alumni Sans' rel='stylesheet'>
     <title>Login</title>
 </head>
 <body>
-    <div class="centro">
+    <div class="centro login-container">
         <a class="centro titulo">Login</a>
         <div class="entrada">
             <input class="caixa_texto" placeholder="Insira seu nome" id="nome"></input>
@@ -16,7 +17,7 @@
         </div>
         <div class="botoes">
             <div class="espaço">
-                <a href="../pages/Tela2.html">
+                <a href="../pages/logar.html">
                     <button class="entrar" onclick="entrar()" >Entrar</button>
                 </a>
             </div>
@@ -28,6 +29,7 @@
         </div>
     </div>
 
+
     <script>
         document.querySelector("form").addEventListener('submit', (event) => {
             event.preventDefault()
@@ -36,8 +38,9 @@
             login(nome, senha)
         })
 
+
         async function login(nome, senha) {
-           console.log({ nome, senha }) 
+           console.log({ nome, senha })
            const resposta = await fetch("https://q4d76s-3000.csb.app/login", {
             method: "POST",
             body: JSON.stringify({
@@ -50,7 +53,7 @@
         })
         const json = await resposta.json()
         localStorage.setItem("token", json.token)
-    }         
+    }        
     </script>
 </body>
 </html>
