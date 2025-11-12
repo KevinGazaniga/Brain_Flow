@@ -14,5 +14,15 @@ function cadastrar() {
   } else if (nome_usuario.length < 3) {
     alert("Nome de usuario muito curto");
   } else {
+    fetch("/usuarios", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome: nome_usuario,
+        senha: senha,
+      }),
+    });
   }
 }

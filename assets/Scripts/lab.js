@@ -37,7 +37,7 @@ function andar() {
 
   if (player == 164) {
     alert("Você conseguiu achar o pergaminho do raciocínio");
-    window.location.href = 'lab.html';
+    window.location.href = "lab.html";
   }
 }
 function podeMover(proximaPosicao) {
@@ -102,3 +102,6 @@ document.body.addEventListener("keydown", function (event) {
     andar();
   }
 });
+function pegar_nome() {
+  return "kevin";
+}

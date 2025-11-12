@@ -8,11 +8,10 @@ rotaUsuario.get("/usuarios", async (req, res) => {
 });
 
 rotaUsuario.post("/usuarios", async (req, res) => {
-  const { nome, nacionalidade, senha } = req.body;
+  const { nome, senha } = req.body;
   await db.usuario.create({
     data: {
       nome,
-      nacionalidade,
       senha,
     },
   });
@@ -33,7 +32,6 @@ rotaUsuario.put("/usuarios/:id", async (req, res) => {
   const data = {};
 
   if (req.body.nome) data.nome = req.body.nome;
-  if (req.body.nacionalidade) data.nacionalidade = req.body.nacionalidade;
   if (req.body.senha) data.senha = req.body.senha;
 
   await db.usuario.update({
