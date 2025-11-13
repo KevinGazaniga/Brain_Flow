@@ -35,7 +35,7 @@ rotaPaginas.get("/Jogo_da_memoria_Fase_Dificil", async (req, res) => {
 });
 
 rotaPaginas.get("/Labirinto_Fase_Facil", async (req, res) => {
-  res.sendFile(join(__dirname, "..", "..", "pages", "lab.html"));
+  res.sendFile(join(__dirname, "..", "..", "pages", "lab_fases", "lab.html"));
 });
 
 rotaPaginas.get("/Labirinto_Fase_Medio", async (req, res) => {
@@ -43,15 +43,15 @@ rotaPaginas.get("/Labirinto_Fase_Medio", async (req, res) => {
 });
 
 rotaPaginas.get("/Labirinto_Fase_DIficil", async (req, res) => {
-    res.sendFile(join(__dirname, "..", "..", "pages", "lab3.html"));
-  });
+  res.sendFile(join(__dirname, "..", "..", "pages", "lab3.html"));
+});
 
 rotaPaginas.get("/Usuario", async (req, res) => {
-    res.sendFile(join(__dirname, "..", "..", "pages", "usuario.html"));
-  });
+  res.sendFile(join(__dirname, "..", "..", "pages", "usuario.html"));
+});
 
 rotaPaginas.get("/Ranking", async (req, res) => {
-    res.sendFile(join(__dirname, "..", "..", "pages", "ranking.html"));
-  });
+  res.sendFile(join(__dirname, "..", "..", "pages", "ranking.html"));
+});
 
 module.exports = { rotaPaginas };
