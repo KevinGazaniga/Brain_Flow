@@ -24,5 +24,7 @@ function cadastrar() {
         senha: senha,
       }),
     });
+    alert("Conta criada com sucessso");
+    window.location.href = "Tela2.html";
   }
 }

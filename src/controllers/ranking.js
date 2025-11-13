@@ -15,14 +15,11 @@ rotaRanking.get("/ranking/:jogo", async (req, res) => {
   res.json(ranking);
 });
 
-rotaRanking.post("/ranking/:jogo", async (req, res) => {
-  where: {
-    jogo: req.params.jogo,
-  },
-  
+// rotaRanking.post("/ranking/:jogo", async (req, res) => {
+//   where: {
+//     jogo: req.params.jogo,
+//   },
 
-
-
-});
+// });
 
 module.exports = { rotaRanking };
