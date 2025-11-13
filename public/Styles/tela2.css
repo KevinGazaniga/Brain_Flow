@@ -58,7 +58,7 @@ body {
   height: 28px;
   border-radius: 20px;
   border: none;
-  background-image: url("../fotos/lupa.svg");
+  background-image: url("/fotos/lupa.svg");
   background-color: transparent;
   background-size: cover;
   cursor: pointer;

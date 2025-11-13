@@ -44,7 +44,7 @@ body {
 }
 
 .jogador {
-  background-image: url("../fotos/jogadorlab.png");
+  background-image: url("/fotos/jogadorlab.png");
   background-size: cover;
   border: none;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 .venceu {
-  background-image: url("../fotos/pergaminho.svg");
+  background-image: url("/fotos/pergaminho.svg");
   background-size: cover;
 }
 .fundoBotao {

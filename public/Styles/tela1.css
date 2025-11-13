@@ -23,7 +23,7 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    background-image: url("../fotos/play.png");
+    background-image: url("/fotos/play.png");
     
 }
 .centro {

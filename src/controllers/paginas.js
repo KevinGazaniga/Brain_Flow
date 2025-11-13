@@ -10,7 +10,7 @@ rotaPaginas.get("/logar", async (req, res) => {
   res.sendFile(join(__dirname, "..", "..", "pages", "login.html"));
 });
 
-rotaPaginas.get("/Começar", async (req, res) => {
+rotaPaginas.get("/Comecar", async (req, res) => {
   res.sendFile(join(__dirname, "..", "..", "pages", "Tela1.html"));
 });
 
