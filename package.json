@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch index.js"
+    "start": "npx prisma migrate deploy && node src/index.js"
   },
   "keywords": [],
   "author": "Ives van Hoorne",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@prisma/client": "^6.16.0",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "prisma": "^6.16.0"
   }
 }

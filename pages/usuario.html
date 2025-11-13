@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        async function listarUsuarios() {
+            const resposta = await fetch("https://q4d76s-3000.csb.app/usuarios")
+            const json = await resposta.json()
+
+            json.forEach(usuario => {
+                document.querySelector("div").innerHTML += `<p>${usuario.nome}</p>`
+            })   
+        }
+        listarUsuarios()
+    </script>
+</body>
+</html>
