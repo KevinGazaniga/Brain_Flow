@@ -104,4 +104,16 @@ body {
 .bordas_arredondadas4 {
     border-bottom-right-radius: 10px;
 }
-  
+/* Estilos CSS */
+#timer-display {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+.instrucao {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}

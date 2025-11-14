@@ -32,7 +32,7 @@ body {
   background-repeat: no-repeat;
 } /*não mudei nada*/
 .chão {
-  background-color: #C2E3FF;
+  background-color: #c2e3ff;
   border: none !important;
 } /*não mudei nada*/
 
@@ -50,7 +50,8 @@ body {
 }
 
 .fun_caixa {
-  width: fit-content; height: fit-content;
+  width: fit-content;
+  height: fit-content;
   padding: 15px;
   background-color: #19568a;
   align-content: center;
@@ -74,15 +75,15 @@ body {
   cursor: pointer;
 }
 .fundoTitulo {
-  color: #0B5C9E; /* Cor do texto */
+  color: #0b5c9e; /* Cor do texto */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #07477b;
 }
 
 .fundoSair {
-  color: #C2E3FF; /* Cor do texto */
+  color: #c2e3ff; /* Cor do texto */
   -webkit-text-stroke-width: 1.2px;
-  -webkit-text-stroke-color: #0B5C9E;
+  -webkit-text-stroke-color: #0b5c9e;
 }
 
 .exit_proximo {
@@ -93,15 +94,27 @@ body {
 }
 
 .bordas_arredondadas {
-    border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .bordas_arredondadas2 {
-    border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .bordas_arredondadas3 {
-    border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .bordas_arredondadas4 {
-    border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-  
+/* Estilos CSS */
+#timer-display {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+.instrucao {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}

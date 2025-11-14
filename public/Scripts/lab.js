@@ -27,7 +27,6 @@ addEventListener("DOMContentLoaded", () => {
 
 var player = 135;
 
-
 function andar() {
   var prevCampo = document.querySelector(".jogador");
   if (prevCampo) {
@@ -37,8 +36,9 @@ function andar() {
   }
 
   if (player == 164) {
-    pauseStopwatch()
-    finishMaze()
+    pauseStopwatch();
+    finishMaze();
+
     alert("Você conseguiu achar o pergaminho do raciocínio");
     window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_Facil";
   }
@@ -58,7 +58,7 @@ document.body.addEventListener("keydown", function (event) {
   console.log("Movendo: ", key);
 
   switch (key) {
-    case "ArrowLeft", "a":
+    case ("ArrowLeft", "a"):
       if (
         player == 15 ||
         player == 45 ||
@@ -75,7 +75,7 @@ document.body.addEventListener("keydown", function (event) {
         novaPosicao = player - 1;
         break;
       }
-    case "ArrowRight", "d":
+    case ("ArrowRight", "d"):
       if (
         player == 14 ||
         player == 59 ||
@@ -91,10 +91,10 @@ document.body.addEventListener("keydown", function (event) {
         novaPosicao = player + 1;
         break;
       }
-    case "ArrowUp", "w":
+    case ("ArrowUp", "w"):
       novaPosicao = player - 15;
       break;
-    case "ArrowDown", "s":
+    case ("ArrowDown", "s"):
       novaPosicao = player + 15;
       break;
   }
@@ -106,44 +106,43 @@ document.body.addEventListener("keydown", function (event) {
   }
 });
 
-
 // Variáveis Globais do Cronômetro
-let isRunning = false;     // Indica se o cronômetro está ativo
-let isStarted = false;     // Indica se o cronômetro já foi iniciado pelo menos uma vez
-let startTime;             // Hora em que o cronômetro começou (ou foi resumido)
-let elapsedTime = 0;       // Tempo decorrido (em milissegundos)
-let intervalId;            // ID para limpar o setInterval
-const display = document.getElementById('timer-display');
+let isRunning = false; // Indica se o cronômetro está ativo
+let isStarted = false; // Indica se o cronômetro já foi iniciado pelo menos uma vez
+let startTime; // Hora em que o cronômetro começou (ou foi resumido)
+let elapsedTime = 0; // Tempo decorrido (em milissegundos)
+let intervalId; // ID para limpar o setInterval
+const display = document.getElementById("timer-display");
 
 // =======================================================
 // 1. Função de Formatação do Tempo (MM:SS:MsMs)
 // =======================================================
 function formatTime(ms) {
-    // Converte milissegundos para Minutos, Segundos e Milissegundos
-    
-    // Milissegundos (últimos 3 dígitos)
-    let milliseconds = String(Math.floor(ms)).slice(-3).padStart(3, '0');
-    
-    // Segundos
-    let totalSeconds = Math.floor(ms / 1000);
-    let seconds = String(totalSeconds % 60).padStart(2, '0');
-    
-    // Minutos
-    let minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+  // Converte milissegundos para Minutos, Segundos e Milissegundos
 
-    // Retorna no formato MM:SS:MsMs
-    return `${minutes}:${seconds}:${milliseconds.substring(0, 2)}`; // Usando 2 dígitos para Ms
+  // Milissegundos (últimos 3 dígitos)
+  let milliseconds = String(Math.floor(ms)).slice(-3).padStart(3, "0");
+
+  // Segundos
+  let totalSeconds = Math.floor(ms / 1000);
+  let seconds = String(totalSeconds % 60).padStart(2, "0");
+
+  // Minutos
+  let minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
+
+  // Retorna no formato MM:SS:MsMs
+  return `${minutes}:${seconds}:${milliseconds.substring(0, 2)}`; // Usando 2 dígitos para Ms
 }
 
 // =======================================================
 // 2. Função de Atualização do Display
 // =======================================================
 function updateDisplay() {
-    // Calcula o tempo decorrido desde o início
-    elapsedTime = Date.now() - startTime;
-    
-    // Atualiza o display
-    display.textContent = formatTime(elapsedTime);
+  // Calcula o tempo decorrido desde o início
+  elapsedTime = Date.now() - startTime;
+
+  // Atualiza o display
+  display.textContent = formatTime(elapsedTime);
 }
 
 // =======================================================
@@ -152,34 +151,34 @@ function updateDisplay() {
 
 /** Inicia o cronômetro. */
 function startStopwatch() {
-    if (isRunning) return;
+  if (isRunning) return;
 
-    isRunning = true;
-    
-    // Define a hora de início ajustando pelo tempo já decorrido
-    startTime = Date.now() - elapsedTime; 
-    
-    // Chama a função de atualização a cada 10 milissegundos
-    intervalId = setInterval(updateDisplay, 10);
-    console.log("Cronômetro Iniciado!");
+  isRunning = true;
+
+  // Define a hora de início ajustando pelo tempo já decorrido
+  startTime = Date.now() - elapsedTime;
+
+  // Chama a função de atualização a cada 10 milissegundos
+  intervalId = setInterval(updateDisplay, 10);
+  console.log("Cronômetro Iniciado!");
 }
 
 /** Pausa o cronômetro (útil para menus ou pausas). */
 function pauseStopwatch() {
-    if (player == 74) return;
-    
-    clearInterval(intervalId);
-    isRunning = false;
-    console.log("Cronômetro Pausado.");
+  if (player == 74) return;
+
+  clearInterval(intervalId);
+  isRunning = false;
+  console.log("Cronômetro Pausado.");
 }
 
 /** Zera e para o cronômetro. */
 function resetStopwatch() {
-    pauseStopwatch();
-    elapsedTime = 0;
-    isStarted = false;
-    display.textContent = "00:00:00";
-    console.log("Cronômetro Resetado.");
+  pauseStopwatch();
+  elapsedTime = 0;
+  isStarted = false;
+  display.textContent = "00:00:00";
+  console.log("Cronômetro Resetado.");
 }
 
 /**
@@ -187,16 +186,15 @@ function resetStopwatch() {
  * @returns {string} O tempo final formatado.
  */
 function finishMaze() {
-    pauseStopwatch(); // Para o tempo
-    const finalTime = formatTime(elapsedTime);
-    console.log(`Labirinto concluído em: ${finalTime}`);
-    
-    // Você pode desabilitar os controles aqui para evitar que o jogador continue a andar
-    document.removeEventListener('keydown', handleKeyPress);
-    
-    return finalTime;
-}
+  pauseStopwatch(); // Para o tempo
+  const finalTime = formatTime(elapsedTime);
+  console.log(`Labirinto concluído em: ${finalTime}`);
 
+  // Você pode desabilitar os controles aqui para evitar que o jogador continue a andar
+  document.removeEventListener("keydown", handleKeyPress);
+
+  return finalTime;
+}
 
 // =======================================================
 // 4. Lógica de Início Automático (O Ponto Principal)
@@ -204,28 +202,27 @@ function finishMaze() {
 
 /** Manipulador de Eventos de Tecla */
 function handleKeyPress(event) {
-    // Lista de teclas que devem iniciar o cronômetro (setas e WASD)
-    const movementKeys = ['w', 'a', 's', 'd'];
+  // Lista de teclas que devem iniciar o cronômetro (setas e WASD)
+  const movementKeys = ["w", "a", "s", "d"];
 
-    // Converte a tecla para minúsculo para facilitar a comparação
-    const key = event.key.toLowerCase();
-    
-    // Verifica se a tecla é uma das teclas de movimento
-    if (movementKeys.includes(key)) {
-        
-        // Se ainda não foi iniciado, comece o cronômetro!
-        if (!isStarted) {
-            startStopwatch();
-            isStarted = true;
-            
-            // Opcional: Remova a instrução visual
-            document.querySelector('.instrucao').style.display = 'none';
-        }
-        
-        // Aqui você adicionaria a lógica de "movimentar o jogador"
-        // ex: movePlayer(key);
+  // Converte a tecla para minúsculo para facilitar a comparação
+  const key = event.key.toLowerCase();
+
+  // Verifica se a tecla é uma das teclas de movimento
+  if (movementKeys.includes(key)) {
+    // Se ainda não foi iniciado, comece o cronômetro!
+    if (!isStarted) {
+      startStopwatch();
+      isStarted = true;
+
+      // Opcional: Remova a instrução visual
+      document.querySelector(".instrucao").style.display = "none";
     }
+
+    // Aqui você adicionaria a lógica de "movimentar o jogador"
+    // ex: movePlayer(key);
+  }
 }
 
 // Adiciona o listener de teclado que irá chamar a função acima
-document.addEventListener('keydown', handleKeyPress);
+document.addEventListener("keydown", handleKeyPress);
