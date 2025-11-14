@@ -45,7 +45,7 @@ function andar() {
     
     if ( player == 239) {
         alert("Você conseguiu achar o pergaminho do intelecto");
-        window.location.href = 'lab2.html';
+        window.location.href = 'https://xd6mrv-3000.csb.app/Labirinto_Fase_Medio';
     }
 }
 

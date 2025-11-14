@@ -2,7 +2,6 @@ const { Router } = require("express");
 const jwt = require("jsonwebtoken");
 const { db } = require("../dbs");
 const rotaLogin = Router();
-
 rotaLogin.post("/login", async (req, res) => {
   const { nome, senha } = req.body;
 
@@ -11,6 +10,7 @@ rotaLogin.post("/login", async (req, res) => {
   });
 
   console.log(usuario);
+  console.log({ nome, senha });
 
   if (senha !== usuario.senha) {
     res.status(401).json({ mensagem: "usuario ou senha invalido" });

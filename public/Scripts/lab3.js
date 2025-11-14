@@ -68,12 +68,13 @@ function andar() {
     prevCampo.classList.remove("jogador");
     var campo = document.getElementById(player);
     campo.classList.add("jogador");
-
   }
 
   if (player == 562) {
-    alert("Você conseguiu achar o pergaminho da Reflexão, com isso você conectou todas as partes do seu cortex pré-frontal");
-    window.location.href = 'lab3.html';
+    alert(
+      "Você conseguiu achar o pergaminho da Reflexão, com isso você conectou todas as partes do seu cortex pré-frontal"
+    );
+    window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_Dificil";
   }
 }
 

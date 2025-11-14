@@ -37,7 +37,7 @@ function andar() {
 
   if (player == 164) {
     alert("Você conseguiu achar o pergaminho do raciocínio");
-    window.location.href = "lab.html";
+    window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_Facil";
   }
 }
 function podeMover(proximaPosicao) {

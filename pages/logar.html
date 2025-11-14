@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/logar.css">
-    <script src="../src/controllers/logar.js"></script>
+    <script src="/Scripts/logar.js" defer></script>
     <link href='https://fonts.googleapis.com/css?family=Alumni Sans' rel='stylesheet'>
     <title>Login</title>
 </head>
 <body>
-    <div class="centro login-container">
+    <form class="centro login-container">
         <a class="centro titulo">Login</a>
         <div class="entrada">
             <input class="caixa_texto" placeholder="Insira seu nome" id="nome"></input>
-            <input class="caixa_texto" type="password" placeholder="Informe sua senha" id="Senha"></input>
+            <input class="caixa_texto" type="password" placeholder="Informe sua senha" id="senha"></input>
         </div>
         <div class="botoes">
             <div class="espaço">
-                <a href="../pages/logar.html">
-                    <button class="entrar" onclick="entrar()" >Entrar</button>
-                </a>
+                <button class="entrar" type="submit" onclick="" >Entrar</button>
             </div>
             <div>
                 <a href="https://xd6mrv-3000.csb.app/cadastrar">
@@ -27,33 +25,6 @@
                 </a>
             </div>
         </div>
-    </div>
-
-
-    <script>
-        document.querySelector("form").addEventListener('submit', (event) => {
-            event.preventDefault()
-            const nome = document.querySelector("#nome")
-            const senha = document.querySelector("#senha")
-            login(nome, senha)
-        })
-
-
-        async function login(nome, senha) {
-           console.log({ nome, senha })
-           const resposta = await fetch("https://q4d76s-3000.csb.app/login", {
-            method: "POST",
-            body: JSON.stringify({
-                nome,
-                senha
-              }),
-              headers: {
-                "Content-Type": "application/json"
-              }
-        })
-        const json = await resposta.json()
-        localStorage.setItem("token", json.token)
-    }        
-    </script>
+    </form>
 </body>
 </html>

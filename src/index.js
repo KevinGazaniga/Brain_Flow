@@ -1,5 +1,4 @@
 const express = require("express");
-const { join } = require("node:path");
 
 const { rotaUsuario } = require("./controllers/usuario");
 const { rotaPontuacao } = require("./controllers/pontuacao");
