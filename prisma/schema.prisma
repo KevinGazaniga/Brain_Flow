@@ -12,17 +12,17 @@ datasource db {
 }
 
 model Usuario {
-  id      Int      @id @default(autoincrement())
-  nome    String
-  nacionalidade   String
-  senha   String
-  pontuacao Pontuacao?
+  id            Int        @id @default(autoincrement())
+  nome          String
+  nacionalidade String
+  senha         String
+  pontuacao     Pontuacao?
 }
 
 model Pontuacao {
-  id      Int    @id @default(autoincrement())
-  pontos  Int
-  jogo    String
-  usuario Usuario  @relation(fields: [id_usuario], references: [id])
-  id_usuario Int @unique
+  id         Int     @id @default(autoincrement())
+  pontos     Int
+  jogo       String
+  usuario    Usuario @relation(fields: [id_usuario], references: [id])
+  id_usuario Int     @unique
 }

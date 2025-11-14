@@ -7,7 +7,7 @@ rotaPaginas.get("/cadastrar", async (req, res) => {
 });
 
 rotaPaginas.get("/logar", async (req, res) => {
-  res.sendFile(join(__dirname, "..", "..", "pages", "login.html"));
+  res.sendFile(join(__dirname, "..", "..", "pages", "logar.html"));
 });
 
 rotaPaginas.get("/Comecar", async (req, res) => {
@@ -39,11 +39,11 @@ rotaPaginas.get("/Labirinto_Fase_Facil", async (req, res) => {
 });
 
 rotaPaginas.get("/Labirinto_Fase_Medio", async (req, res) => {
-  res.sendFile(join(__dirname, "..", "..", "pages", "lab2.html"));
+  res.sendFile(join(__dirname, "..", "..", "pages", "lab_fases", "lab2.html"));
 });
 
 rotaPaginas.get("/Labirinto_Fase_DIficil", async (req, res) => {
-  res.sendFile(join(__dirname, "..", "..", "pages", "lab3.html"));
+  res.sendFile(join(__dirname, "..", "..", "pages", "lab_fases", "lab3.html"));
 });
 
 rotaPaginas.get("/Usuario", async (req, res) => {
