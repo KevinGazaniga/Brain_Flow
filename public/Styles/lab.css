@@ -31,7 +31,7 @@ body {
   border: none !important;
   background-repeat: no-repeat;
 } /*não mudei nada*/
-.chão {
+.chao {
   background-color: #c2e3ff;
   border: none !important;
 } /*não mudei nada*/
@@ -61,6 +61,7 @@ body {
 .venceu {
   background-image: url("/fotos/pergaminho.svg");
   background-size: cover;
+  background-color: transparent !important;
 }
 .fundoBotao {
   width: 100vw;

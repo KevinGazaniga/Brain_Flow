@@ -1,57 +1,48 @@
 const { Router } = require("express");
-// Assumindo que 'db' é seu cliente Prisma ou ORM para acessar o banco de dados.
 const { db } = require("../dbs");
 const rotaRanking = Router();
 
-// Rota GET - Carregar Ranking
-// Ordem: Tempo Mais Rápido (menor valor de 'pontos') fica em primeiro (ASC)
+// GET ranking
 rotaRanking.get("/ranking/:jogo", async (req, res) => {
   try {
     const ranking = await db.pontuacao.findMany({
-      where: {
-        jogo: req.params.jogo,
-      }, // CORREÇÃO: Para tempo, a ordenação é ASC (Ascendente - menor tempo é o melhor)
-      orderBy: {
-        pontos: "asc",
-      },
+      where: { jogo: req.params.jogo },
+      orderBy: { pontos: "asc" },
       take: 10,
     });
+
     res.json(ranking);
   } catch (error) {
-    console.error("Erro ao buscar o ranking:", error);
+    console.error("Erro ao buscar ranking:", error);
     res.status(500).json({ erro: "Erro interno do servidor" });
   }
 });
 
-// Rota POST - Salvar Nova Pontuação
+// POST pontuação
 rotaRanking.post("/ranking/:jogo", async (req, res) => {
-  // Assumindo que o corpo da requisição (req.body) contém { usuario: "nome", pontos: 12.345 }
   const { usuario, pontos } = req.body;
-  const jogo = req.params.jogo; // Validação básica
+  const jogo = req.params.jogo;
 
-  if (!usuario || typeof pontos !== "number" || pontos <= 0) {
-    return res
-      .status(400)
-      .json({
-        erro: "Dados inválidos: 'usuario' e 'pontos' (tempo em segundos) são obrigatórios e válidos.",
-      });
+  console.log("POST recebido:", req.body);
+
+  if (!usuario || typeof pontos !== "number") {
+    return res.status(400).json({
+      erro: "Envie: usuario (string) e pontos (number)",
+    });
   }
+
   try {
-    // Lógica para salvar a nova pontuação
-    const novoScore = await db.pontuacao.create({
+    const novo = await db.pontuacao.create({
       data: {
-        jogo: jogo,
-        usuario: usuario,
-        pontos: pontos, // Pontos é o tempo em segundos // Você pode adicionar um campo 'data' ou 'dataCriacao' aqui, se o seu schema tiver.
+        jogo,
+        usuario, // <-- SALVA DIRETO AQUI
+        pontos,
       },
     });
 
-    res.status(201).json({
-      mensagem: "Pontuação registrada com sucesso!",
-      score: novoScore,
-    });
+    res.status(201).json(novo);
   } catch (error) {
-    console.error("Erro ao salvar a pontuação:", error);
+    console.error("Erro ao salvar pontuação:", error);
     res.status(500).json({ erro: "Erro ao registrar a pontuação." });
   }
 });
