@@ -1,7 +1,3 @@
-// lab2.js
-// =====================
-// MAPA ORIGINAL (mantido)
-// =====================
 const mapa = [
   0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1,
   1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0,
@@ -21,138 +17,95 @@ const mapa = [
   1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1,
   1, 0, 1, 0,
 ];
-
-// CONFIG
-const COLS = 30;
-let player = 135; // mantém como seu código original (se quiser mudar, me diga)
-const FINAL = 239; // posição final informada
-
-// Cria o tabuleiro
-document.addEventListener("DOMContentLoaded", () => {
+addEventListener("DOMContentLoaded", () => {
   const tabuleiro = document.querySelector("#tabuleiro");
-  tabuleiro.innerHTML = "";
 
   for (let i = 0; i < mapa.length; i++) {
     tabuleiro.innerHTML += `<input id="${i}" type="button" class="${
       mapa[i] == 0 ? "parede" : "chão"
     }">`;
   }
-
-  // jogador
-  document.getElementById(player).classList.add("jogador");
-
-  // mostrar pergaminho desde o início
-  if (document.getElementById(FINAL)) {
-    document.getElementById(FINAL).classList.add("venceu");
-  }
+  document.querySelectorAll("input")[30].classList.add("jogador");
+  // document.querySelectorAll("input")[""].classList.add("bordas_arredondadas")
+  // document.querySelectorAll("input")[""].classList.add("bordas_arredondadas2")
+  // document.querySelectorAll("input")[""].classList.add("bordas_arredondadas3")
+  // document.querySelectorAll("input")[""].classList.add("bordas_arredondadas4")
+  document.querySelectorAll("input")[239].classList.add("trofeu");
 });
 
-// Cronômetro (mesma lógica)
-let isRunning = false;
-let isStarted = false;
-let startTime;
-let elapsedTime = 0;
-let intervalId;
-const display = document.getElementById("timer-display");
+var player = 30;
 
-function formatTime(ms) {
-  let milliseconds = String(Math.floor(ms)).slice(-3).padStart(3, "0");
-  let totalSeconds = Math.floor(ms / 1000);
-  let seconds = String(totalSeconds % 60).padStart(2, "0");
-  let minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
-  return `${minutes}:${seconds}:${milliseconds.substring(0, 2)}`;
-}
-
-function updateDisplay() {
-  elapsedTime = Date.now() - startTime;
-  if (display) display.textContent = formatTime(elapsedTime);
-}
-
-function startStopwatch() {
-  if (isRunning) return;
-  isRunning = true;
-  startTime = Date.now() - elapsedTime;
-  intervalId = setInterval(updateDisplay, 10);
-}
-
-function pauseStopwatch() {
-  clearInterval(intervalId);
-  isRunning = false;
-}
-
-function finishMaze() {
-  pauseStopwatch();
-  return formatTime(elapsedTime);
-}
-
-// Movimento (corrigido)
-function podeMover(pos) {
-  if (pos < 0 || pos >= mapa.length) return false;
-  const el = document.getElementById(pos);
-  return el && !el.classList.contains("parede");
-}
-
-document.addEventListener("keydown", function (event) {
-  const key = event.key.toLowerCase();
-  let novaPosicao = player;
-
-  if (
-    !isStarted &&
-    [
-      "w",
-      "a",
-      "s",
-      "d",
-      "arrowup",
-      "arrowdown",
-      "arrowleft",
-      "arrowright",
-    ].includes(key)
-  ) {
-    startStopwatch();
-    isStarted = true;
-    document.querySelector(".instrucao")?.style.setProperty("display", "none");
+function andar() {
+  var prevCampo = document.querySelector(".jogador");
+  if (prevCampo) {
+    prevCampo.classList.remove("jogador");
+    var campo = document.getElementById(player);
+    campo.classList.add("jogador");
   }
 
+  if (player == 239) {
+    alert("Você conseguiu achar o pergaminho do intelecto");
+    window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_DIficil";
+  }
+}
+
+function podeMover(proximaPosicao) {
+  if (proximaPosicao < 0 || proximaPosicao > mapa.length - 1) {
+    return false;
+  }
+
+  var campo = document.getElementById(proximaPosicao);
+  return !campo.classList.contains("parede");
+}
+
+document.body.addEventListener("keydown", function (event) {
+  const key = event.key;
+  var novaPosicao = player;
+  console.log("Movendo: ", key);
+
   switch (key) {
-    case "arrowleft":
-    case "a":
-      if (player % COLS !== 0) novaPosicao = player - 1;
+    case "ArrowLeft":
+      if (
+        player == 30 ||
+        player == 90 ||
+        player == 120 ||
+        player == 150 ||
+        player == 180 ||
+        player == 210 ||
+        player == 270 ||
+        player == 300 ||
+        player == 330 ||
+        player == 390
+      ) {
+      } else {
+        novaPosicao = player - 1;
+        break;
+      }
+    case "ArrowRight":
+      if (
+        player == 89 ||
+        player == 119 ||
+        player == 149 ||
+        player == 179 ||
+        player == 239 ||
+        player == 329 ||
+        player == 389
+      ) {
+      } else {
+        novaPosicao = player + 1;
+        break;
+      }
+    case "ArrowUp":
+      novaPosicao = player - 30;
       break;
-
-    case "arrowright":
-    case "d":
-      if ((player + 1) % COLS !== 0) novaPosicao = player + 1;
-      break;
-
-    case "arrowup":
-    case "w":
-      novaPosicao = player - COLS;
-      break;
-
-    case "arrowdown":
-    case "s":
-      novaPosicao = player + COLS;
+    case "ArrowDown":
+      novaPosicao = player + 30;
       break;
   }
 
   if (podeMover(novaPosicao)) {
+    console.log("Pode mover");
     player = novaPosicao;
     andar();
   }
 });
-
-function andar() {
-  document.querySelector(".jogador")?.classList.remove("jogador");
-  document.getElementById(player).classList.add("jogador");
-
-  if (player === FINAL) {
-    document.getElementById(FINAL)?.classList.add("venceu");
-    pauseStopwatch();
-    finishMaze();
-    alert(
-      "Você conseguiu achar o pergaminho da Reflexão, com isso você conectou todas as partes do seu cortex pré-frontal"
-    );
-    window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_DIficil";
-  }
-}

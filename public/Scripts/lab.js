@@ -1,141 +1,101 @@
-// lab1.js
-
 const mapa = [
   0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
   1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1,
   0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0,
   1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0,
   0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1,
-  1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1,
-  0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1,
-  1, 1, 1, 1,
+  1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1,
+  0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1,
+  1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1,
+  1, 1,
 ];
-
-const COLS = 15;
-let player = 135;
-const FINAL = 164;
-
-document.addEventListener("DOMContentLoaded", () => {
+addEventListener("DOMContentLoaded", () => {
   const tabuleiro = document.querySelector("#tabuleiro");
-  tabuleiro.innerHTML = "";
 
   for (let i = 0; i < mapa.length; i++) {
     tabuleiro.innerHTML += `<input id="${i}" type="button" class="${
       mapa[i] == 0 ? "parede" : "chao"
     }">`;
   }
+  document.querySelectorAll("input")[135].classList.add("jogador");
 
-  document.getElementById(player).classList.add("jogador");
-
-  if (document.getElementById(FINAL)) {
-    document.getElementById(FINAL).classList.add("venceu");
-  }
+  document.querySelectorAll("input")[149].classList.add("trofeu");
 });
 
-let isRunning = false;
-let isStarted = false;
-let startTime;
-let elapsedTime = 0;
-let intervalId;
-const display = document.getElementById("timer-display");
+var player = 135;
 
-function formatTime(ms) {
-  let milliseconds = String(Math.floor(ms)).slice(-3).padStart(3, "0");
-  let totalSeconds = Math.floor(ms / 1000);
-  let seconds = String(totalSeconds % 60).padStart(2, "0");
-  let minutes = String(Math.floor(totalSeconds / 60)).padStart(2, "0");
-  return `${minutes}:${seconds}:${milliseconds.substring(0, 2)}`;
-}
-
-function updateDisplay() {
-  elapsedTime = Date.now() - startTime;
-  if (display) display.textContent = formatTime(elapsedTime);
-}
-
-function startStopwatch() {
-  if (isRunning) return;
-  isRunning = true;
-  startTime = Date.now() - elapsedTime;
-  intervalId = setInterval(updateDisplay, 10);
-}
-
-function pauseStopwatch() {
-  clearInterval(intervalId);
-  isRunning = false;
-}
-
-function finishMaze() {
-  pauseStopwatch();
-  return formatTime(elapsedTime);
-}
-
-function podeMover(pos) {
-  if (pos < 0 || pos >= mapa.length) return false;
-
-  const el = document.getElementById(pos);
-  return el && !el.classList.contains("parede");
-}
-
-document.addEventListener("keydown", function (event) {
-  const key = event.key.toLowerCase();
-  let novaPosicao = player;
-
-  if (
-    !isStarted &&
-    [
-      "w",
-      "a",
-      "s",
-      "d",
-      "arrowup",
-      "arrowdown",
-      "arrowleft",
-      "arrowright",
-    ].includes(key)
-  ) {
-    startStopwatch();
-    isStarted = true;
-    document.querySelector(".instrucao")?.style.setProperty("display", "none");
+function andar() {
+  var prevCampo = document.querySelector(".jogador");
+  if (prevCampo) {
+    prevCampo.classList.remove("jogador");
+    var campo = document.getElementById(player);
+    campo.classList.add("jogador");
   }
 
+  if (player == 149) {
+    alert("Você conseguiu achar o pergaminho do raciocínio");
+    window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_Medio";
+  }
+}
+function podeMover(proximaPosicao) {
+  if (proximaPosicao < 0 || proximaPosicao > mapa.length - 1) {
+    return false;
+  }
+
+  var campo = document.getElementById(proximaPosicao);
+  return !campo.classList.contains("parede");
+}
+
+document.body.addEventListener("keydown", function (event) {
+  const key = event.key;
+  var novaPosicao = player;
+  console.log("Movendo: ", key);
+
   switch (key) {
-    case "arrowleft":
-    case "a":
-      if (player % COLS !== 0) novaPosicao = player - 1;
+    case "ArrowLeft":
+      if (
+        player == 15 ||
+        player == 45 ||
+        player == 60 ||
+        player == 75 ||
+        player == 90 ||
+        player == 105 ||
+        player == 135 ||
+        player == 150 ||
+        player == 165 ||
+        player == 195
+      ) {
+      } else {
+        novaPosicao = player - 1;
+        break;
+      }
+    case "ArrowRight":
+      if (
+        player == 14 ||
+        player == 59 ||
+        player == 74 ||
+        player == 119 ||
+        player == 134 ||
+        player == 149 ||
+        player == 164 ||
+        player == 194 ||
+        player == 209
+      ) {
+      } else {
+        novaPosicao = player + 1;
+        break;
+      }
+    case "ArrowUp":
+      novaPosicao = player - 15;
       break;
-
-    case "arrowright":
-    case "d":
-      if ((player + 1) % COLS !== 0) novaPosicao = player + 1;
-      break;
-
-    case "arrowup":
-    case "w":
-      novaPosicao = player - COLS;
-      break;
-
-    case "arrowdown":
-    case "s":
-      novaPosicao = player + COLS;
+    case "ArrowDown":
+      novaPosicao = player + 15;
       break;
   }
 
   if (podeMover(novaPosicao)) {
+    console.log("Pode mover");
     player = novaPosicao;
     andar();
   }
 });
-
-function andar() {
-  document.querySelector(".jogador")?.classList.remove("jogador");
-  document.getElementById(player).classList.add("jogador");
-
-  if (player === FINAL) {
-    document.getElementById(FINAL)?.classList.add("venceu");
-
-    pauseStopwatch();
-    finishMaze();
-    alert("Você conseguiu achar o pergaminho do raciocínio!");
-  }
-  window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_Facil";
-}

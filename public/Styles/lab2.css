@@ -22,7 +22,7 @@ body {
   justify-content: center;
   border-radius: 10px;
   overflow: hidden;
-} /*não mudei nada*/
+}
 
 .parede {
   background-color: #19568a;
@@ -30,11 +30,11 @@ body {
   background-size: cover;
   border: none !important;
   background-repeat: no-repeat;
-} /*não mudei nada*/
-.chão {
+}
+.chao {
   background-color: #c2e3ff;
   border: none !important;
-} /*não mudei nada*/
+}
 
 .texto {
   font-family: "Alumni Sans SC", sans-serif;
@@ -46,7 +46,7 @@ body {
 .jogador {
   background-image: url("/fotos/jogadorlab.png");
   background-size: cover;
-  border: none;
+  border: none !important;
 }
 
 .fun_caixa {
@@ -58,9 +58,11 @@ body {
   border-radius: 5%;
 }
 
-.venceu {
-  background-image: url("/fotos/pergaminho.svg");
+.trofeu {
+  background-color: #cde44e;
   background-size: cover;
+  background-repeat: no-repeat;
+  border: none !important;
 }
 .fundoBotao {
   width: 100vw;
@@ -104,17 +106,4 @@ body {
 }
 .bordas_arredondadas4 {
   border-bottom-right-radius: 10px;
-}
-/* Estilos CSS */
-#timer-display {
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 3em;
-  color: white;
-  text-align: center;
-  margin-top: 50px;
-}
-.instrucao {
-  text-align: center;
-  color: white;
-  font-size: 1.2em;
 }

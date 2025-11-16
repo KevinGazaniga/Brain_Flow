@@ -50,8 +50,4 @@ rotaPaginas.get("/Usuario", async (req, res) => {
   res.sendFile(join(__dirname, "..", "..", "pages", "usuario.html"));
 });
 
-rotaPaginas.get("/Ranking", async (req, res) => {
-  res.sendFile(join(__dirname, "..", "..", "pages", "ranking.html"));
-});
-
 module.exports = { rotaPaginas };
