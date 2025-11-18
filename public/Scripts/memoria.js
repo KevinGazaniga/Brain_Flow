@@ -42,9 +42,7 @@ addEventListener("DOMContentLoaded", () => {
             cartas_certas = cartas_certas + 2;
             console.log(cartas_certas);
             if (cartas_certas == 12) {
-              alert(
-                "Parabéns, modo fácil concluido. Quando estiver pronto(a) clique em 'Próximo' para a próxima dificuldade"
-              );
+              alert("Excelente! Você está pegando o jeito.");
               window.location.href = "memoria.html";
             }
           } else {

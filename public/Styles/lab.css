@@ -36,6 +36,12 @@ body {
   border: none !important;
 } /*não mudei nada*/
 
+.pergaminho {
+  background-image: url("/fotos/arvore.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .texto {
   font-family: "Alumni Sans SC", sans-serif;
   text-align: center;
@@ -56,12 +62,6 @@ body {
   background-color: #19568a;
   align-content: center;
   border-radius: 5%;
-}
-
-.trofeu {
-  background-color: #cde44e;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .fundoBotao {

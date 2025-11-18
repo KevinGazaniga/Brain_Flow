@@ -14,12 +14,9 @@ body {
   color: #c2e3ff;
 }
 
-div.virada {
-  img {
-    display: none;
-  }
+div.virada img {
+  display: none;
 }
-
 .carta_img {
   display: flex;
   width: 100px;

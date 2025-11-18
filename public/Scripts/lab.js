@@ -4,7 +4,7 @@ const mapa = [
   0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0,
   1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0,
   0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1,
-  1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1,
+  1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2, 1, 0, 1, 1, 1, 1,
   0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1,
   1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1,
   1, 1,
@@ -13,13 +13,16 @@ addEventListener("DOMContentLoaded", () => {
   const tabuleiro = document.querySelector("#tabuleiro");
 
   for (let i = 0; i < mapa.length; i++) {
-    tabuleiro.innerHTML += `<input id="${i}" type="button" class="${
-      mapa[i] == 0 ? "parede" : "chao"
-    }">`;
+    let classe = "";
+    if (mapa[i] == 0) classe = "parede";
+    if (mapa[i] == 1) classe = "chao";
+    if (mapa[i] == 2) classe = "pergaminho";
+
+    tabuleiro.innerHTML += `<input id="${i}" type="button" class="${classe}">`;
   }
   document.querySelectorAll("input")[135].classList.add("jogador");
 
-  document.querySelectorAll("input")[149].classList.add("trofeu");
+  document.querySelectorAll("input")[149].classList.add("chao");
 });
 
 var player = 135;
