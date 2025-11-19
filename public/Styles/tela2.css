@@ -70,6 +70,9 @@ body {
   align-items: center;
   background-color: white;
   border-radius: 20px;
+  font-family: "Alumni Sans";
+  font-size: 40px;
+  color: #0b5c9e;
 }
 .lupa {
   width: 28px;
