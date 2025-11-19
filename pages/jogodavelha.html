@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="/Styles/jogodavelha.css">
     <script src="/Scripts/jogodavelha.js" defer></script>
     <title>Jogo da Velha</title>
-</head>
+    <link
+    href="https://fonts.googleapis.com/css?family=Alumni Sans"
+    rel="stylesheet"
+  />
+  </head>
 <body>
   <div class="jogador">
     <input type="text" id="10" placeholder="Jogador(a)                      X" class="jogadorA"></input>
     <br>
     <input type="text" id="11" placeholder="Jogador(a)                      O" class="jogadorA"></input>
     <br>
-    <input type="button" id="15" class="jogadorA confirmarBotão" value="Confirmar" onclick="com()"></input>
+    <input type="button" id="15" class="jogadorA confirmarBotão fundoBotaoConfirmar" value="Confirmar" onclick="com()"></input>
   </div>
   <div class="central">
     <div class="fundoTabuleiro">
@@ -32,7 +36,7 @@
         </div>
       </div>
       <br><br>
-      <div class="buttons">
+      <div class="buttons confirmarBotão">
         <a href="https://xd6mrv-3000.csb.app/menu" class="button">
           <p>Sair</p>
         </a>

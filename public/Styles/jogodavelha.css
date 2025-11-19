@@ -9,25 +9,26 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 1100px;
+  width: 500px;
 }
 
 .bordaTabuleiro {
-  padding: 90px 95px;
+  font-size: 100px;
+  height: 170px;
+  width: 170px;
   border-radius: 15px;
-  font-size: 40px;
   color: white;
   cursor: pointer;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Verdana, sans-serif;
 }
 
 .tituloMaior {
   color: #c2e3ff;
-  font-family: Arial;
-  font-size: 60px;
   cursor: pointer;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  font-family: "Alumni Sans";
+  text-align: center;
+  font-size: 125px;
 }
 
 .limparSair {
@@ -38,22 +39,21 @@ body {
   border-radius: 15px;
   height: 35px;
   width: 350px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: rgb(255, 255, 255);
+  font-family: "Alumni Sans";
   border-color: rgb(28, 38, 180);
   cursor: pointer;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
 .jogadorA {
-  height: 23px;
+  height: 40px;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
+  border-color: rgb(48, 103, 187);
   cursor: pointer;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border-color: rgb(2, 2, 2);
-  color: rgb(0, 0, 0);
-  cursor: pointer;
+  font-family: "Alumni Sans";
+  background-color: #c2e3ff;
+  font-size: 30px;
 }
 .buttons {
   display: flex;
@@ -61,8 +61,8 @@ body {
   align-items: center;
 }
 .fundo_ciano {
-  width: 750px;
-  height: 750px;
+  width: 570px;
+  height: 570px;
   background-color: #c2e3ff;
   justify-content: center;
   align-items: center;
@@ -80,7 +80,9 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.jogador {
+  position: absolute;
+}
 .quadradinhoTabuleiro {
   background-color: #0380e5;
 }
@@ -94,8 +96,8 @@ body {
 .button {
   width: 105px;
   height: 48px;
-  background-color: white;
-  border-radius: 52px;
+  background-color: #c2e3ff;
+  border-radius: 20px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
