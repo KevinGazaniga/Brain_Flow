@@ -19,6 +19,7 @@ async function login(nome, senha) {
   });
   const json = await resposta.json();
   localStorage.setItem("token", json.token);
+  localStorage.setItem("nome", json.nome);
   alert("Login feito com sucesso");
   window.location.href = "https://xd6mrv-3000.csb.app/menu";
 }

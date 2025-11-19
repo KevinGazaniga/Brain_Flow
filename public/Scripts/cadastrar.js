@@ -25,6 +25,6 @@ async function cadastrar() {
       }),
     });
     alert("Conta criada com sucesso");
-    window.location.assign("https://xd6mrv-3000.csb.app/menu");
+    window.location.assign("https://xd6mrv-3000.csb.app/logar");
   }
 }
