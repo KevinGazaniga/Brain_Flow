@@ -6,11 +6,15 @@
   "scripts": {
     "start": "npx prisma migrate deploy && node src/index.js"
   },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "keywords": [],
   "author": "Ives van Hoorne",
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^6.16.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "prisma": "^6.16.0"
