@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx prisma migrate deploy && npx tsx src/index.ts"
+    "start": "npx prisma migrate deploy && npx --omit=dev tsx src/index.ts"
   },
   "engines": {
     "node": ">=22.12.0"
