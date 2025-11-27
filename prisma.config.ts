@@ -6,9 +6,7 @@ export default defineConfig({
   migrations: {
     path: "prisma/migrations",
   },
-  engine: "classic",
   datasource: {
-    // 💡 Use process.env directly instead of a non-existent 'env' function.
     url: env("DATABASE_URL"),
   },
 });
