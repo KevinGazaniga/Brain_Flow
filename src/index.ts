@@ -1,8 +1,9 @@
-const express = require("express");
+import express from "express";
 
-const { rotaUsuario } = require("./controllers/usuario");
-const { rotaLogin } = require("./controllers/logar");
-const { rotaPaginas } = require("./controllers/paginas");
+import { rotaUsuario } from "./controllers/usuario";
+import { rotaLogin } from "./controllers/logar";
+import { rotaPaginas } from "./controllers/paginas";
+
 const server = express();
 server.use(express.json());
 server.use(express.static("public"));
