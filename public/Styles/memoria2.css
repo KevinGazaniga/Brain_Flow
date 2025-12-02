@@ -1,0 +1,96 @@
+body {
+  height: 97.9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background: linear-gradient(to bottom, #2b99f3, #053358);
+  background-repeat: no-repeat;
+}
+.texto {
+  font-family: "Alumni Sans";
+  text-align: center;
+  font-size: 60px;
+  color: #c2e3ff;
+}
+div.virada img {
+  display: none;
+}
+
+.carta_img {
+  display: flex;
+  width: 100px;
+  height: 120px;
+  background-color: #0b5c9e;
+  cursor: pointer;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 18px;
+}
+.chão {
+  background-color: rgb(24, 14, 3);
+  border: none !important;
+}
+.conteúdo {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.carta {
+  width: 520px;
+  height: 833px;
+  display: flex;
+  background-color: #c2e3ff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 20px 35px;
+  border-radius: 30px;
+}
+
+.carta input {
+  width: 103px;
+  height: 132px;
+  border-radius: 19px;
+}
+
+.limparSair {
+  display: flex;
+  font-size: 20px;
+  color: rgb(51, 157, 199);
+  border-radius: 15px;
+  height: 35px;
+  width: 120px;
+  justify-content: center;
+  font-family: "Alumni Sans";
+  background-color: #c2e3ff;
+  cursor: pointer;
+  -webkit-text-stroke-width: 0.5px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.fundo_limparsair {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  gap: 25px;
+}
+.carta_img:not(.virada) {
+  background-color: #f9ffd9 !important;
+}
+
+.no-select {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.carta_img svg {
+  fill: #053358;
+}
