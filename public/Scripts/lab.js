@@ -37,7 +37,7 @@ function andar() {
 
   if (player == 149) {
     alert("Você conseguiu achar o pergaminho do raciocínio");
-    window.location.href = "https://xd6mrv-3000.csb.app/Labirinto_Fase_Medio";
+    window.location.href = " /Labirinto_Fase_Medio";
   }
 }
 function podeMover(proximaPosicao) {

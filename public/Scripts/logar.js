@@ -21,5 +21,5 @@ async function login(nome, senha) {
   localStorage.setItem("token", json.token);
   localStorage.setItem("nome", json.nome);
   alert("Login feito com sucesso");
-  window.location.href = "https://xd6mrv-3000.csb.app/menu";
+  window.location.href = " /menu";
 }

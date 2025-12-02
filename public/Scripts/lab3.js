@@ -74,7 +74,7 @@ function andar() {
     alert(
       "Você conseguiu achar o pergaminho da Reflexão, com isso você conectou todas as partes do seu cortex pré-frontal"
     );
-    window.location.href = "https://xd6mrv-3000.csb.app/Menu";
+    window.location.href = " /Menu";
   }
 }
 
